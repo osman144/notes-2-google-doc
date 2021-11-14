@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/petite-vue" defer init></script>
+  <title>Document</title>
+</head>
+<body>
+  <!-- Use v-scope to mark regions on the page that should be controlled by petite-vue. -->
+  <!-- The defer attribute makes the script execute after HTML content is parsed. -->
+  <!-- The init attribute tells petite-vue to automatically query and initialize all elements that have v-scope on the page -->
+  <div>Hello World</div>
+  <div v-scope="{ count: 0 }">
+    {{ count }}
+    <button @click="count++">inc</button>
+  </div>
+  
+</body>
+</html>
